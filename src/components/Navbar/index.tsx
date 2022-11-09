@@ -25,7 +25,7 @@ export default Navbar
 export function NavbarHome(){
 
   return(
-    <footer className={styles.container}>
+    <footer className={styles.container2}>
         <nav>    
             <Link href='/' legacyBehavior>
                 <a>Início</a> 

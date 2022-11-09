@@ -80,6 +80,7 @@
     position: relative
 
 .main_article__content
+    padding: 0 1rem
 
     & h2
         text-transform: uppercase
@@ -90,9 +91,11 @@
         text-align: center
         font-weight: 900
         text-shadow: 0 0 15px #765c26
+        @media(max-width: 600px)
+            font-size: 22px
 
-    & img 
-        width: 100px    
+    & img
+        width: 100px
         will-change: transform
         position: absolute
         right: 15px
@@ -100,7 +103,7 @@
         cursor: pointer
         transition: transform .3s
 
-        &:hover 
+        &:hover
             transform: scale(1.1)
 
     & p
@@ -111,8 +114,9 @@
         will-change: transform
         text-shadow: 0 0 15px #765c26
         text-align: justify
+        @media(max-width: 600px)
+            font-size: 16px
 
         & span
             color: #196cca
-            font-weight: bold 
-            
+            font-weight: bold
