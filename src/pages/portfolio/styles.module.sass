@@ -30,7 +30,8 @@
     gap: 25px
 
 .gallery
-    border: 5px solid #838383
+    @include border
+    border-image: linear-gradient(45deg, #31b4d0, transparent) 1
     margin-bottom: 25px
     min-width: 500px
     width: 100%
@@ -39,6 +40,7 @@
     cursor: pointer
     display: block
     position: relative
+    text-align: center
     @media(max-width: 600px)
         min-width: 450px
     @media(max-width: 500px)

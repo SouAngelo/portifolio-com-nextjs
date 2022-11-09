@@ -1,0 +1,60 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "portifolio",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Cillum cillum et ullamco sint dolore ut eiusmod consectetur nisi duis irure dolor qui eiusmod. Quis reprehenderit aliqua incididunt consequat sunt ex sunt esse aliqua. Cupidatat deserunt ut minim laborum qui et cupidatat cupidatat.",
+        "spans": []
+      }
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+    },
+    "language": [
+      {
+        "type": "paragraph",
+        "text": "Eiusmod nostrud minim quis magna ex fugiat veniam.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Labore irure culpa labore ut ea elit eu eu commodo. Consectetur aliquip proident consequat sit culpa magna est cillum magna ex dolor pariatur. Veniam occaecat eiusmod dolore elit ex dolore eiusmod nisi ut laborum ipsum.",
+        "spans": []
+      }
+    ],
+    "technology": [
+      {
+        "type": "paragraph",
+        "text": "Commodo aliquip est consectetur anim fugiat aute anim anim voluptate ipsum. Irure cillum nisi laboris adipisicing id reprehenderit ad. Labore ullamco ad aliqua deserunt sint labore anim aliquip fugiat aliqua.",
+        "spans": []
+      }
+    ],
+    "github": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "deploy": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    }
+  }
+}

@@ -3,3 +3,20 @@
    justify-content: $j
    align-items: $a
    flex-direction: $f
+
+@mixin border
+   border: 5px solid 
+   animation: border infinite 5s
+
+@keyframes border
+   0%
+      border-image: linear-gradient(45deg, #31b4d0, transparent) 1
+
+   45%
+      border-image: linear-gradient(45deg, #3131d0, transparent) 1
+
+   75%
+      border-image: linear-gradient(45deg, #ebad28, transparent) 1
+
+   100%
+      border-image: linear-gradient(45deg, #31b4d0, transparent) 1

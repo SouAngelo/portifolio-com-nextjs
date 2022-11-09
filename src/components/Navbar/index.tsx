@@ -59,3 +59,25 @@ export function NavbarHomePort(){
     </footer>
   )
 }
+
+export function NavbarProject(){
+
+  return(
+    <footer className={styles.container2}>
+        <nav>    
+            <Link href='/' legacyBehavior>
+                <a>Início</a> 
+            </Link>
+               
+             <Link href='/portfolio' legacyBehavior>
+                <a>Portifólio</a>
+             </Link>  
+
+             <Link href='/about' legacyBehavior>
+                <a>Sobre mim</a>
+             </Link> 
+
+        </nav>
+    </footer>
+  )
+}
