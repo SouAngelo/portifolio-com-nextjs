@@ -1,3 +1,3 @@
 EM DESENVOLVIMENTO
 
-LINK PARA ACOMPANHAR: 
+LINK PARA ACOMPANHAR: https://portifolio-com-nextjs.vercel.app/
