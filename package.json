@@ -24,8 +24,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
+    "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.56.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "vanilla-tilt": "^1.7.3"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.3",

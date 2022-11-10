@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavbarHome } from "../../components/Navbar";
 import styles from "./styles.module.sass";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { GetStaticProps } from "next";
 import getPrismicClient from "../../services/prismic";
 import * as prismicR from "@prismicio/richtext";
 import Prismic from "@prismicio/client";
+import Tilt from "react-vanilla-tilt";
 
 type Port = {
   slug: string;
@@ -55,26 +56,31 @@ function Portifolio({ portifolios }: PortProps) {
             <div className={styles.containerGallery}>
               {projeto.map((projeto) => {
                 return (
-                  <div className={styles.gallery} key={projeto.slug}>
-                    <Image
-                      quality={100}
-                      src={projeto.image}
-                      alt={projeto.title}
-                      width={500}
-                      height={500}
-                      placeholder="blur"
-                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcWg8AAc8BJpg2zxQAAAAASUVORK5CYII="
-                    />
+                  <Tilt className={styles.tilt}>
+                    <div className={styles.gallery} key={projeto.slug}>
+                      <Image
+                        quality={100}
+                        src={projeto.image}
+                        alt={projeto.title}
+                        width={500}
+                        height={500}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcWg8AAc8BJpg2zxQAAAAASUVORK5CYII="
+                      />
 
-                    <div className={styles.moreInfo}>
-                      <h2>{projeto.title}</h2>
-                      <p>{projeto.language}</p>
+                      <div className={styles.moreInfo}>
+                        <h2>{projeto.title}</h2>
+                        <p>{projeto.language}</p>
 
-                      <Link href={`/portfolio/${projeto.slug}`} legacyBehavior>
-                        <a>Ver mais</a>
-                      </Link>
+                        <Link
+                          href={`/portfolio/${projeto.slug}`}
+                          legacyBehavior
+                        >
+                          <a>Ver mais</a>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
+                  </Tilt>
                 );
               })}
             </div>
