@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavbarHome } from "../../components/Navbar";
 import styles from "./styles.module.sass";
 import Link from "next/link";
