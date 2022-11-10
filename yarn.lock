@@ -1806,6 +1806,13 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/vanilla-tilt@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@types/vanilla-tilt/-/vanilla-tilt-1.6.2.tgz#1b49b1c0027ed3a664fb3683427d9d4f05f316c3"
+  integrity sha512-KQRqLG1/5G768y3EYiwuiRqU+dpmxB8QuYdOqpd+4HM+E4RMGh2/xKfRUz7N38Al981ul0Km2vsb7CuxgLHBww==
+  dependencies:
+    vanilla-tilt "*"
+
 "@types/yauzl@^2.9.1":
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/@types/yauzl/-/yauzl-2.10.0.tgz#b3248295276cf8c6f153ebe6a9aba0c988cb2599"
@@ -6260,15 +6267,15 @@ validate-npm-package-name@^3.0.0:
   dependencies:
     builtins "^1.0.3"
 
+vanilla-tilt@*, vanilla-tilt@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/vanilla-tilt/-/vanilla-tilt-1.7.3.tgz#1c6a15c1c627e949571167e5421ee82cf465026a"
+  integrity sha512-tdNVZ1JyDNsByplVCS1H3/i/zcGOIrFW5BQp7u9SyXKjNypZw7s89x+GA8kOhUxWOggF4A1E9N55jEF0ttpLjw==
+
 vanilla-tilt@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/vanilla-tilt/-/vanilla-tilt-1.4.1.tgz#7dae5fe5904c160140b92e586a1ddd81c93bc4a9"
   integrity sha512-yZS4jIejmhqThLlwzJ5juPwDMk6rtf+ekADDK1lAYNiw6H2VGAJr9bt8vCp+ED5kyK6sE0sMq6mxPfV8a/NdFw==
-
-vanilla-tilt@^1.7.3:
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/vanilla-tilt/-/vanilla-tilt-1.7.3.tgz#1c6a15c1c627e949571167e5421ee82cf465026a"
-  integrity sha512-tdNVZ1JyDNsByplVCS1H3/i/zcGOIrFW5BQp7u9SyXKjNypZw7s89x+GA8kOhUxWOggF4A1E9N55jEF0ttpLjw==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
