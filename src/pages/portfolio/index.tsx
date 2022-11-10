@@ -11,6 +11,13 @@ import * as prismicR from "@prismicio/richtext";
 import Prismic from "@prismicio/client";
 import Tilt from "react-vanilla-tilt";
 
+import {
+  FiChevronLeft,
+  FiChevronRight,
+  FiChevronsLeft,
+  FiChevronsRight,
+} from "react-icons/fi";
+
 type Port = {
   slug: string;
   title: string;
@@ -24,14 +31,52 @@ interface PortProps {
   totalPages: string;
 }
 
-function Portifolio({ portifolios }: PortProps) {
+function Portifolio({ portifolios, page, totalPages }: PortProps) {
   const [visible, setVisible] = useState(false);
 
   const [projeto, setProjeto] = useState(portifolios);
+  const [currentPage, setCurrentPage] = useState(Number(page))
 
   function handleContent() {
     setVisible(true);
   }
+
+  // buscar novos posts
+  async function reqPost(pageNumber: number){
+    const prismic = getPrismicClient()
+
+    const response = await prismic.query([
+       Prismic.Predicates.at('document.type', 'portifolio')
+    ], {
+       orderings: '[document.last_publication_date desc]' ,// ordenar a mais recente
+       fetch: ['portifolio.title', 'portifolio.language' , 'portifolio.image'], 
+       pageSize: 3,
+       page: String(pageNumber)
+    })
+
+    return response
+ }
+
+ async function navigatePage(pageNumber: number){
+    const response = await reqPost(pageNumber)
+
+    if(response.results.length === 0){
+       return
+    }
+
+   const getPosts: any = response.results.map( projeto => {
+       return{
+          slug: projeto.uid, 
+          title: prismicR.asText(projeto.data.title),
+          image: projeto.data.image.url,
+        
+ 
+       }
+    })
+    
+    setCurrentPage(pageNumber)
+    setProjeto(getPosts)
+ }
 
   return (
     <>
@@ -83,6 +128,34 @@ function Portifolio({ portifolios }: PortProps) {
                   </Tilt>
                 );
               })}
+
+              <div className={styles.buttonNavigate}>
+                {Number(currentPage) >= 2 && (
+                  <div>
+                    <button onClick={() => navigatePage(1)}>
+                      <FiChevronsLeft size={25} color="#fff" />
+                    </button>
+                    <button
+                      onClick={() => navigatePage(Number(currentPage - 1))}
+                    >
+                      <FiChevronLeft size={25} color="#fff" />
+                    </button>
+                  </div>
+                )}
+
+                {Number(currentPage) < Number(totalPages) && (
+                  <div>
+                    <button
+                      onClick={() => navigatePage(Number(currentPage + 1))}
+                    >
+                      <FiChevronRight size={25} color="#fff" />
+                    </button>
+                    <button onClick={() => navigatePage(Number(totalPages))}>
+                      <FiChevronsRight size={25} color="#fff" />
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
@@ -99,8 +172,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const response = await prismic.query(
-    [Prismic.Predicates.at("document.type", "portifolio")],
-    {}
+    [Prismic.Predicates.at("document.type", "portifolio")],{
+      orderings: '[document.last_publication_date desc]' ,// ordenar a mais recente
+      fetch: ['portifolio.title', 'portifolio.language' , 'portifolio.image'], 
+      pageSize: 3 // 3 pub por pagina
+   }
   );
 
   const portifolios = response.results.map((portifolio) => {

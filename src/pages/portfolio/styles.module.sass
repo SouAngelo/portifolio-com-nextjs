@@ -51,7 +51,7 @@
         min-width: 280px
     @media(max-width: 280px)
         min-width: 240px
-    
+
 .gallery
     @include border
     border-image: linear-gradient(45deg, #31b4d0, transparent) 1
@@ -60,7 +60,7 @@
     border-radius: 5px
     cursor: pointer
     position: absolute
-    top: 0 
+    top: 0
     left: 0
 
     & img
@@ -177,4 +177,24 @@
             filter: brightness(1.2)
             transform: scale(1.1)
 
+.buttonNavigate
+    margin-top: 1rem
+    margin-bottom: 2rem
+    @include flexbox(space-between, center, row)
 
+    & div
+        @include flexbox(none, none, row)
+
+        & button
+            margin: 0 5px
+            border: 0
+            background: blue
+            display: flex
+            padding: .5rem
+            border-radius: 5px
+
+            & svg
+                padding: 0 3px
+                cursor: pointer
+
+               
