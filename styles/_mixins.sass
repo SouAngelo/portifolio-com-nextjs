@@ -5,7 +5,7 @@
    flex-direction: $f
 
 @mixin border
-   border: 5px solid 
+   border: 5px solid
    animation: border infinite 5s
 
 @keyframes border
@@ -20,3 +20,16 @@
 
    100%
       border-image: linear-gradient(45deg, #31b4d0, transparent) 1
+
+@mixin colorSvg
+   animation: color infinite 8s
+
+@keyframes color
+   0%
+      color: #30f8d2
+
+   50%
+      color: #e31c5e
+
+   100%
+      color: #30f8d2

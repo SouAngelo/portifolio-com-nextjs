@@ -1,5 +1,9 @@
 @import '../../../styles/_mixins'
 
+@font-face
+    font-family: Pirata One
+    src: url('PirataOne-Regular.ttf') 
+
 .container
     min-height: 100vh
     padding-top: 30px
@@ -136,8 +140,11 @@
         color: #000
         max-width: 250px
         text-align: center
-        font-size: 19px
+        font-size: 20px
         font-weight: 600
+        font-family: Pirata One, 'arial'
+        color: #7e5022
+        line-height: 2.3rem
         @media(max-width: 600px)
             left: 60px
         @media(max-width: 420px)
@@ -158,11 +165,11 @@
         color: #f6f6f6
         padding: 9px 2rem
         text-transform: uppercase
-        font-size: 14px
-        font-weight: bold
+        font-size: 19px
         border-radius: 5px
         cursor: pointer
         transition: transform .3s
+        font-family: Pirata One, 'arial'
         @media(max-width: 600px)
             left: 95px
         @media(max-width: 420px)
@@ -196,5 +203,3 @@
             & svg
                 padding: 0 3px
                 cursor: pointer
-
-               

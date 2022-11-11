@@ -44,7 +44,7 @@ export function NavbarHome(){
 export function NavbarHomePort(){
 
   return(
-    <footer className={styles.container}>
+    <footer className={styles.container2} style={{background: '#000'}}>
         <nav>    
             <Link href='/' legacyBehavior>
                 <a>Início</a> 

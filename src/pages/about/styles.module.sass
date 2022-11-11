@@ -1,4 +1,130 @@
+@import '../../../styles/_mixins'
+
+@font-face
+    font-family: Arkhip
+    src: url('Arkhip_font.ttf')
+
 .container
     min-height: 100vh
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) ,url(/images/layer-base.png) no-repeat center center/cover
+    background: linear-gradient(#0c0b1ddd, #26262687) ,url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80') no-repeat center center/cover
     background-attachment: fixed
+
+.introductionAbout
+    min-height: 100vh
+    @include flexbox(center, center, row)
+    font-family: 'Arkhip'
+
+    & img
+        max-width: 600px
+        align-self: flex-end
+
+.textAbout
+    max-width: 600px
+    margin-top: 80px
+    text-align: justify
+
+    & p
+        font-size: 15px
+        text-shadow: 0 0 5px #ef3b32
+
+    & button
+        margin-top: 2rem
+        background: linear-gradient(95deg, #000 10%, #131318)
+        border: 0
+        padding: 8px 2rem
+        font-weight: 600
+        text-transform: uppercase
+        color: #fff
+        font-family: "Arkhip"
+        border-radius: 5px
+        cursor: pointer
+        transition: ease-out .4s
+
+        &:hover
+            filter: brightness(1.3)
+
+// skills 
+
+.skills
+    display: flex
+    align-items: center
+    
+    width: 100%
+    height: 100%
+    padding: 1rem
+    @media(max-width: 830px)
+        flex-direction: column-reverse
+        padding-top: 3rem
+
+    & .avatarContainer
+        max-width: 600px
+        min-width: 300px
+        @media(max-width: 320px)
+            min-width: 250px
+
+        & img 
+            width: 100%
+            height: 100%
+
+.skillsCards
+    margin-top: 2rem
+    width: 50%
+    height: 500px
+    display: flex
+    align-items: center
+    @media(max-width: 700px)
+        width: 70%
+    @media(max-width: 500px)
+        min-width: 200px
+        width: 100%
+
+.skillCard
+    min-width: 300px
+    height: 400px
+    border-radius: 20px
+    background: linear-gradient(#0c0b1dec, #262626d7), url('https://usbecosp.files.wordpress.com/2013/07/fliperama.jpg')
+    background-size: cover
+    border: 3px solid blue
+    @include flexbox(none, center, column)
+    padding: 1rem
+    text-align: center
+    font-family: Arkhip
+    text-transform: uppercase
+    color: #ddd       
+    @media(max-width: 330px)
+        min-width: 250px
+    @media(max-width: 285px)
+        min-width: 210px
+
+    & h2
+        margin-bottom: 1rem
+
+    & p
+        margin-bottom: 1rem
+        font-size: 13px
+        line-height: 28px
+
+    & svg
+        @include colorSvg
+
+.containerImg
+    @include flexbox(center, center, none)
+    width: 110px
+    height: 110px
+    border: 3px solid #1b539c
+    box-shadow: 0 0 15px blue
+    border-radius: 50%
+    cursor: pointer
+    padding: 3rem
+    margin-bottom: 2rem
+    @media(max-width: 400px)
+        width: 80px
+        height: 80px
+
+    & img
+        transition: transform .3s
+        width: 80px
+        height: 80px
+
+        &:hover
+            transform: scale(1.1)
