@@ -1,15 +1,11 @@
 import Head from "next/head";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavbarHomePort } from "../../components/Navbar";
-import { description } from "./description";
 import Link from "next/link";
-
-import Tilt from "react-vanilla-tilt";
 
 import styles from "./styles.module.sass";
 import frontAvatar from "../../../public/images/front-avatar.png";
 import frontMoving from "../../../public/images/front-moving.png";
-import frontStopr from "../../../public/images/front-avatar.png";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,7 +23,6 @@ function About() {
   const [visible, setVisible] = useState(false);
 
   const [imageAvatar, setImageAvatar] = useState(frontAvatar);
-  const [descriptionText, setDescriptionText] = useState(description.about);
 
   function handleChangeImage() {
     if (imageAvatar == frontAvatar) {
@@ -50,7 +45,24 @@ function About() {
             <Image src={imageAvatar} alt="" width={600} height={600} />
 
             <div className={styles.textAbout}>
-              <p>{descriptionText}</p>
+              <p>
+                Olá, eu me chamo Ângelo Gustavo e nessa página você verá um
+                pouco sobre mim. Eu sou de São Paulo - SP e tenho 21 anos.
+                Conheci aprogramação quando parei para pensar sobre o meu
+                futuro, sobre o que eu queria fazer da vida. Pesquisei muito até
+                conhecer esse universo incrível em que me identifiquei no mesmo
+                momento em que conheci. Decidi estudar programação e entrei na
+                faculdade. Porém, decidi sair e seguir os estudos focado em
+                aprender as tecnologias necessárias para poder entrar no mercado
+                de trabalho. Desde então estive em uma constante evolução, me
+                apaixonei pelo desenvolvimento front end e hoje procuro a minha
+                primeira oportunidade no mercado. Atualmente, tenho em meu
+                curriculo as tecnologias que o mercado precisa, pois foquei o
+                meu tempo em aprender de uma forma qualitativa, e enfim consegui
+                o meu primeito objetivo: ser um dev front end. Agora, partiu
+                conhecer as minhas Skills, Soft Skills, ver os meus contatos e
+                poder baixar o meu CV! 😎
+              </p>
 
               <button onClick={handleChangeImage}>Bora 😎</button>
             </div>
@@ -346,8 +358,11 @@ function About() {
                 <SwiperSlide className={styles.slide}>
                   <div className={styles.skillCard}>
                     <div className={styles.containerImg}>
-                      <Link href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download" legacyBehavior>
-                        <a target="blank" style={{fontSize: '0px'}}>
+                      <Link
+                        href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download"
+                        legacyBehavior
+                      >
+                        <a target="blank" style={{ fontSize: "0px" }}>
                           <Image
                             width={100}
                             height={100}
@@ -365,7 +380,10 @@ function About() {
                       para fazer o download do currículo.
                     </p>
 
-                    <Link href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download" legacyBehavior>
+                    <Link
+                      href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download"
+                      legacyBehavior
+                    >
                       <a target="blank">
                         <FaSketch size={30} />
                       </a>
@@ -391,13 +409,19 @@ function About() {
                     </p>
 
                     <div className={styles.contactContainer}>
-                      <Link href="https://api.whatsapp.com/send?phone=5511985024510" legacyBehavior>
+                      <Link
+                        href="https://api.whatsapp.com/send?phone=5511985024510"
+                        legacyBehavior
+                      >
                         <a target="blank">
                           <FaWhatsapp size={30} />
                         </a>
                       </Link>
 
-                      <Link href="https://www.linkedin.com/in/souangelogustavo/" legacyBehavior>
+                      <Link
+                        href="https://www.linkedin.com/in/souangelogustavo/"
+                        legacyBehavior
+                      >
                         <a target="blank">
                           <FaLinkedin size={30} />
                         </a>
