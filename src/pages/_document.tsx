@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
         return(
             <Html>
                 <Head>
-                  <link rel="shortcut icon" href="https://assets.stickpng.com/images/627b6510d0205f124c9bcf47.png" type="image/x-icon" />
+                  <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
                 </Head>
 
                 <body>

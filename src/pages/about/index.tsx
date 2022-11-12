@@ -206,7 +206,7 @@ function About() {
                       <Image
                         width={100}
                         height={100}
-                        src="/images/react.webp"
+                        src="/images/react.png"
                         alt=""
                       />
                     </div>
