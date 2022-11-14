@@ -359,7 +359,7 @@ function About() {
                   <div className={styles.skillCard}>
                     <div className={styles.containerImg}>
                       <Link
-                        href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download"
+                        href="https://drive.google.com/u/0/uc?id=1v6PIfD15Mlfh1pcxdhKuxErV-wx9rMDu&export=download"
                         legacyBehavior
                       >
                         <a target="blank" style={{ fontSize: "0px" }}>
@@ -381,7 +381,7 @@ function About() {
                     </p>
 
                     <Link
-                      href="https://drive.google.com/u/0/uc?id=1Y1GRTFziLw0lg8xvwb3nw1ksqC-TMIru&export=download"
+                      href="https://drive.google.com/u/0/uc?id=1v6PIfD15Mlfh1pcxdhKuxErV-wx9rMDu&export=download"
                       legacyBehavior
                     >
                       <a target="blank">
