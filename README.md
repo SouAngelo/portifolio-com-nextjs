@@ -10,7 +10,7 @@ Esse é o meu portifólio, feito para mostrar um pouco sobre mim, minhas expêri
 ## 💻 Layout Responsivo
 <br>
 <p align='center'>
-<img width='700' src='/src/gifs-demo/videonovo.gif'>
+<img width='700' src='/public/demogif.gif'>
 </p>
 
 <br>
